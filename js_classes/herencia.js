@@ -1,8 +1,4 @@
 class Product {
-    id = 0;
-    name = '';
-    price = '';
-    imageUrl = '';
     constructor(id, name, price, imageUrl = 'default.png') {
         this.id = id;
         this.name = name;
@@ -12,7 +8,7 @@ class Product {
 }
 
 class ProductForCart extends Product {
-    quantity = 0;
+
     constructor(id, name, price, quantity, imageUrl = 'default.png') {
         super(id, name, price, imageUrl)
         this.quantity = quantity;
