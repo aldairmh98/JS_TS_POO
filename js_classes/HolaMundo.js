@@ -8,9 +8,9 @@ class HolaMundo {
     }
 }
 
-/*const hola = new HolaMundo();
+const hola = new HolaMundo();
 
-hola.saludar();*/
+hola.saludar();
 
 class HolaMundo2 {
     constructor(saludo) {
