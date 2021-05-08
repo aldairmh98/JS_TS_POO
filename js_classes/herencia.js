@@ -24,11 +24,6 @@ class ProductForCart extends Product {
     }
 }
 
-const productForCart = new ProductForCart(1, 'Fabuloso', 25, 2);
-//ORIGEN DEL JSON
-console.log(productForCart)
-console.log(productForCart.getTotal())
-
 module.exports = {
     ProductForCart
 }
