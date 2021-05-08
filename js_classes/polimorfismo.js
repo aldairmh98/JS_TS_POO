@@ -30,7 +30,7 @@ class CartWithCCPayment extends Cart {
 
     //POLIMORFISMO POR SUBTIPADO
     getTotal() {
-        return super.getTotal() + 10;
+        return super.getTotal() + CartWithCCPayment.appFee;
     }
 }
 
