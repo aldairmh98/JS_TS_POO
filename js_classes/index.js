@@ -4,7 +4,7 @@ class Calculadora {
     _number;
     //ATRIBUTOS ESTATICOS
     static numberOfInstances = 0;
-    constructor(number, number2, operation) {
+    constructor(number, number2, operation = 'SUM') {
         //ATRIBUTOS PRIVADOS
         this._number = number
         this._number2 = number2
@@ -12,16 +12,22 @@ class Calculadora {
         //USO DE ATRIBUTO ESTATICO
         Calculadora.numberOfInstances = Calculadora.numberOfInstances + 1;
     }
-    //MÉTODOS
+    //MÉTODOS GETTER Y SETTER: PROPIEDAD
     get number() {
         return this._number;
     }
+
+    set number(newNumber){
+        return this._number = newNumber;
+    }
+    //PROPIEDAD
 
     //MÉtodo estatico, No puede acceder a variables "normales" sólo las estáticas
     static getNumberOfInstances() {
         return Calculadora.numberOfInstances;
     }
 
+    //Comportamiento
     doOperation() {
         if (this._operation === 'SUM') {
             return this._number + this._number2;
@@ -30,7 +36,7 @@ class Calculadora {
 }
 
 //Creación de un objeto
-const calculadora = new Calculadora(1, 2, 'SUM');
+const calculadora = new Calculadora(5, 2, 'SUM');
 //Pure JS es sobre complicado manejar privado/publico (es virtual)
 console.log(calculadora._number);
 //Llamada de método a través del objeto
