@@ -1,4 +1,9 @@
 class Caja {
+    /**
+     * @param {number} ancho 
+     * @param {*} alto 
+     * @param {*} largo 
+     */
     constructor(ancho, alto, largo) {
         this.ancho = ancho;
         this.alto = alto;
@@ -16,7 +21,7 @@ class Caja {
 }
 
 
-const cajita = new Caja(10, 20, 30);
+const cajita = new Caja();
 console.log(cajita)
 console.log('Volumen', cajita.getVolumen())
 console.log('Area', cajita.getAreaSuperficie())

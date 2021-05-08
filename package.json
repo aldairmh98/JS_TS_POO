@@ -4,8 +4,9 @@
   "description": "Introducción a TS y POO",
   "main": "index.ts",
   "scripts": {
+    "start": "",
     "start:dev": "nodemon",
-    "build": "rimraf ./build && tsc -p ./",
+    "build": "tsc -p ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "aldair mh",

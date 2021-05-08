@@ -1,4 +1,4 @@
-class Product {
+export class Product {
     private _name: string;
     private _price: number;
     //CONSTRUCTOR: Se ejecuta al crear una instancia/objeto
@@ -15,6 +15,3 @@ class Product {
         return this._name;
     }
 }
-
-
-export {Product}

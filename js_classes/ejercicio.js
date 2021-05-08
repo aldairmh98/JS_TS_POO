@@ -65,7 +65,7 @@ class OwnDateSetGet {
 
 class OwnDate {
     months = ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL',
-        'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 
+        'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE',
         'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']
     constructor(day, month, year) {
         this._day = day;
@@ -92,5 +92,29 @@ console.log(result)
 //(en formato de 24 horas ) y devuelva 1 de Febrero del 2019 a las 11:00 P.M. horas (con el formato de 12 hrs "PM o AM" )
 
 
+class OwnDateTime extends OwnDate {
+    constructor(day, month, year, hour, minutes) {
+        super(day, month, year);
+        this.hour = hour;
+        this.minutes = minutes;
+    }
+
+    toDateString() {
+        let timeName = 'AM'
+        let hour = this.hour;
+        if (this.hour >= 12) {
+            timeName = 'PM'
+        }
+        if (this.hour >= 13) {
+            hour = this.hour - 12;
+        }
+        return super.toDateString() + ` a las ${hour}:${this.minutes} ${timeName}`
+    }
+}
+
+
+const ownDate = new OwnDateTime(10, 10, 2021, 13, 50);
+
+console.log(ownDate.toDateString());
 
 
