@@ -1,3 +1,9 @@
 
 npm install --save-dev typescript | yarn add -D typescript
 npm install --save-dev ts-node | yarn add -D ts-node
+
+MODELA Y CONSTRUYE UN JUEGO DE TRIVIA ORIENTADO A OBJETOS, 
+PISTA: Tendrás básicamente la clase Pregunta que contendra propiedades como la pregunta, opciones, respuesta correcta y puntaje,
+Deberás crear una clase PreguntaRespuesta que extienda de Pregunta para poder almacenar la respuesta del usuario y determinar el puntaje de dicha respuesta.
+la clase Trivia contendra un arreglo de PreguntaRespuesta que deberá de arrojar la puntuación final y si el usuario ganó o no, puede ser en métodos diferentes.
+PD: No usar console.log() dentro de las clases, sino del main que corre el programa, divide las clases en archivos diferentes
